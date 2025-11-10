@@ -7,7 +7,9 @@ import (
 func main() {
 
 	subjects := [4]string{"Go", "Javascript", "Python", "Linux"} // slice literal
-	subjectsSlice := subjects[1:3]                               // slicing
+	subjectsSlice := subjects[:3]
+	subjects[0] = "Java"
+	// subjectsSlice[0] = "Java"
 	for _, subject := range subjects {
 		fmt.Println(subject)
 	}
